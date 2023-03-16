@@ -5,6 +5,6 @@
  */
 int main(void)/*this is the start of ec=xcution*/
 {
-	puts("\"Programming is like building a multilingual puzzle\n");
+	puts("\"Programming is like building a multilingual puzzle");
 	return (0);/* if the program displays 0 it means its a success*/
 }
