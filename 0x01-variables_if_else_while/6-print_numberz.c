@@ -5,12 +5,11 @@
 */
 int main(void)
 {
-	char a[10] = "0123456789";
-	int i = 0;
+	int i = 48;
 
-	while (i < 10)
+	while (i < 58)
 	{
-		putchar(a[i]);
+		putchar(i);
 		i++;
 	}
 	putchar('\n');
