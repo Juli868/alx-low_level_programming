@@ -5,11 +5,13 @@
  */
 int main(void)
 {
-int a = 97;
-while (a < 123)
+int i = 0;
+char a = "abcdefghijklmnopqrstuvwxyz";
+while (i < 27)
 {
-	putchar("%c", a)
+	putchar(a[i]);
+	i++;
 }
-	putchar("\n")
+	putchar('\n')
 	return (0)
 }

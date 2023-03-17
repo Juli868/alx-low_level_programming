@@ -5,18 +5,19 @@
 */
 int main(void)
 {
-	int a = 92;
-	int b = 65;
+	char a = "abcdefghijklmnopqrstuvwxyz";
+	char b = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+	int i,j = 0;
 
-	while (a < 123)
+	while (i < 26)
 	{
-		putchar ("%c", a);
+		putchar (a[i]);
 		a++;
 	}
-	putchar ("\n");
-	while (b < 90)
+	while (j < 0)
 	{
-		putchar ("%c", b);
+		putchar (b[j]);
 		b++;
 	}
+	putchar ('\n')
 	return (0);
