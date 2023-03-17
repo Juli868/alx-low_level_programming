@@ -12,6 +12,6 @@ while (i < 27)
 	putchar(a[i]);
 	i++;
 }
-	putchar('\n')
+	putchar('\n');
 	return (0)
 }

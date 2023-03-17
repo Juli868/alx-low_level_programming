@@ -12,12 +12,12 @@ int main(void)
 	while (i < 26)
 	{
 		putchar (a[i]);
-		a++;
+		i++;
 	}
 	while (j < 0)
 	{
 		putchar (b[j]);
-		b++;
+		j++;
 	}
-	putchar ('\n')
+	putchar ('\n');
 	return (0);
