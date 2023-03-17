@@ -10,8 +10,8 @@ int main(void)
 	while (i < 58)
 	{
 		putchar(i);
-		putchar(',');
-		putchar(' ');
+		/*putchar(',');*/
+		/*putchar(' ');*/
 	}
 	return (0);
 }
