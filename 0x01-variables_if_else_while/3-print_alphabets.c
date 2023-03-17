@@ -14,7 +14,7 @@ int main(void)
 		putchar (a[i]);
 		i++;
 	}
-	while (j < 0)
+	while (j < 26)
 	{
 		putchar (b[j]);
 		j++;
