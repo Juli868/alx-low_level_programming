@@ -13,5 +13,6 @@ int main(void)
 		putchar(hex[i]);
 		i++;
 	}
+	putchar('\n');
 		return (0);
 }
