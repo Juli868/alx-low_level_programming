@@ -6,7 +6,7 @@
 int main(void)
 {
 int i = 0;
-char a = "abcdefghijklmnopqrstuvwxyz";
+char a[26] = "abcdefghijklmnopqrstuvwxyz";
 while (i < 27)
 {
 	putchar(a[i]);

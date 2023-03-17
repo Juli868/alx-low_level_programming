@@ -5,8 +5,8 @@
 */
 int main(void)
 {
-	char a = "abcdefghijklmnopqrstuvwxyz";
-	char b = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+	char a[26] = "abcdefghijklmnopqrstuvwxyz";
+	char b[26] = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 	int i,j = 0;
 
 	while (i < 26)
