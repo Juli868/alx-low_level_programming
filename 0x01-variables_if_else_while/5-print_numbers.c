@@ -1,7 +1,7 @@
 #include <stdio.h>
 /**
 * main - starts the program
-* Retun: ends the excution
+* Return: ends the excution
 */
 int main(void)
 {
