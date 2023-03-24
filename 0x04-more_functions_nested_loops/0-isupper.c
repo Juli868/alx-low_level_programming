@@ -1,4 +1,4 @@
-#include "mainh"
+#include "main.h"
 /**
  *_isupper- will check if the character is upper or lower
  *@c: is the one to be checked
