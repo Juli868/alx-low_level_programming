@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include "main.h"
 /**
- print_most_numbers - prints numbers 0to 9excluding 2,4
+ print_most_numbers - prints numbers 0 to 9 excluding 2,4
  *_putchar - prints on the console
  */
 void print_most_numbers(void)
