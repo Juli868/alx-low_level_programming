@@ -12,19 +12,20 @@ int main(void)
 	int month;
 	int day;
 	int year;
-	
+
 	month = 4;
 	day = 01;
 	year = 1997;
-	
-	printf("Date: %02d/%02d/%04d\n", month, day, year);
-	
-	if (year%4 != 0)
-		day = convert_day(month, day);
-	else
-		day = convert_day(month, day)+1;
-	print_remaining_days(month, day, year);
 
-	
+	printf("Date: %02d/%02d/%04d\n", month, day, year);
+
+	if (year <= 2023)
+	{
+		if (year % 4 != 0)
+			day = convert_day(month, day);
+		else
+			day = convert_day(month, day) + 1;
+		print_remaining_days(month, day, year);
+	}
 	return (0);
 }
