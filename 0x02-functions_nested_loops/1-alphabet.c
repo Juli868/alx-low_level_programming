@@ -1,10 +1,17 @@
 #include "main.h"
+
 /**
-* main - start the excution
-* Return: ends the excution
-*/
-int main(void)
+ * orint_alphabet : will print all aphabets 
+ */
+
+void print_alphabet(void)
 {
-	print_alphabet();
-		return (0);
+        char a[26] = "abcdefghijklmnopqrstuvwxyz";
+        int i;
+
+        for (i = 0 ; i < 26; i++)
+        {
+                _putchar(a[i]);
+        }
+        _putchar('\n');
 }
