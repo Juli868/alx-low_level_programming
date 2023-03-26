@@ -1,18 +1,19 @@
-# include "main.h"
+#include "main.h"
+
 /**
-* main - starts the excution of the program
-* Return: marks the end of the excution
-*/
+ *main - will start the execution
+ *Return: 0 if succeeded
+ */
 int main(void)
 {
-	jul('_');
-	jul('p');
-	jul('u');
-	jul('t');
-	jul('c');
-	jul('h');
-	jul('a');
-	jul('r');
-	jul('\n');
+	_putchar('_');
+	_putchar('p');
+	_putchar('u');
+	_putchar('t');
+	_putchar('c');
+	_putchar('h');
+	_putchar('a');
+	_putchar('r');
+	_putchar('\n');
 	return (0);
 }

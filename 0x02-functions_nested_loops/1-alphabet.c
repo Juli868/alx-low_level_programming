@@ -1,17 +1,17 @@
-#include <stdio.h>
+#include "main.h"
 /**
 * alphabet - will print all alphabets in small letters
 */
-void alphabet(void)
+void print_alphabet(void)
 {
 	char a[26] = "abcdefghijklmnopqrstuvwxyz";
 	int i;
 
 	for (i = 0 ; i < 26; i++)
 	{
-		putchar(a[i]);
+		_putchar(a[i]);
 	}
-	putchar('\n');
+	_putchar('\n');
 }
 /**
 * main - start the excution
