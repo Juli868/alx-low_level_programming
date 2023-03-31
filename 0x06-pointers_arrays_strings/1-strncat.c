@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- *strncat - will add 2 strings together but with n number of characters
+ *_strncat - will add 2 strings together but with n number of characters
  *@dest: first string
  *@src: the second string
  *@n: number of characters to stop on
