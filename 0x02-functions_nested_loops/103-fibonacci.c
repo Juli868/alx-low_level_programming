@@ -22,6 +22,6 @@ int main(void)
 		a = b;
 		b = c;
 	}
-	printf("\n%d", final);
+	printf("%d\n", final);
 	return (0);
 }
