@@ -18,6 +18,7 @@ int main(void)
 		a = b;
 		b = c;
 	}
+	printf("\n");
 	return (0);
 }
 
