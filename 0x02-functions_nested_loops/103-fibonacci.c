@@ -18,7 +18,6 @@ int main(void)
 		if (c % 2 == 0)
 		{
 			final = final + c;
-			printf("%d, ", c);
 		}
 		a = b;
 		b = c;
