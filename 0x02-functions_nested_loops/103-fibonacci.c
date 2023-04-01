@@ -10,7 +10,7 @@ int main(void)
 	sum = 0;
 	a = 1;
 	b = 2;
-	final = 0;
+	final = 2;
 	for (i = 0; sum < 4000000; i++)
 	{
 		c = a + b;
