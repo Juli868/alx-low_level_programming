@@ -6,15 +6,15 @@
 int main(void)
 {
 	int i;
-	long a, b, c;
+	long long int a, b, c;
 
 	a = 1;
 	b = 2;
-	printf("%ld, %ld, ", a, b);
+	printf("%lld, %lld, ", a, b);
 	for (i = 1; i < 97; i++)
 	{
 		c = a + b;
-		printf("%ld, ", c);
+		printf("%lld, ", c);
 		a = b;
 		b = c;
 	}
