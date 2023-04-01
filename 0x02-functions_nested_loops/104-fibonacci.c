@@ -11,7 +11,7 @@ int main(void)
 	a = 1;
 	b = 2;
 	printf("%ld, %ld, ", a, b);
-	for (i = 1; i < 99; i++)
+	for (i = 1; i < 101; i++)
 	{
 		c = a + b;
 		printf("%ld, ", c);
