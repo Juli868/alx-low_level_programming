@@ -1,11 +1,10 @@
 #include "main.h"
 #include <stdio.h>
 /**
- *
- *
- *
- *
- *
+ *_strchr - returns the values of string after a character
+ *@s: the string to check
+ *@c: charater to look for
+ *Return: the value to show
  */
 char *_strchr(char *s, char c)
 {
@@ -20,7 +19,7 @@ char *_strchr(char *s, char c)
 	{
 		if (s[j] == c)
 		{
-			return (s + i);
+			return (s + j);
 		}
 	}
 	return (NULL);
