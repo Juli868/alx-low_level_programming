@@ -2,7 +2,7 @@
 #include <stdio.h>
 
 /**
- *_strstr: searches if there is a certain substring in a certain string
+ *_strstr- searches if there is a certain substring in a certain string
  *@haystack: string to check from
  *@needle: string to look for
  *Return: the value if found or null if not
@@ -14,12 +14,13 @@ char *_strstr(char *haystack, char *needle)
 		char *uno = haystack;
 		char *dos = needle;
 
-		while (*uno == *dos && two != '\0')
+		while (*uno == *dos && *dos != '\0')
 		{
-			one++;
-			two++;
+			uno++;
+			dos++;
 		}
-		if (dos == '\0')
-			return(haystack)
+		if (*dos == '\0')
+			return (haystack);
 	}
 	return (NULL);
+}
