@@ -16,10 +16,11 @@ int main(int argc, char *argv[])
 		second = atoi(argv[2]);
 		product = first * second;
 		printf("%d\n", product);
+		return (0);
 	}
 	else
 	{
 		printf("Error");
+		return (1);
 	}
-	return (0);
 }
