@@ -13,7 +13,7 @@ char *_strdup(char *str)
 
 	i = 0;
 	size = 0;
-	while (str[i])
+	while (str[i] != '\0')
 	{
 		i++;
 	}
@@ -31,4 +31,5 @@ char *_strdup(char *str)
 		return (NULL);
 	}
 	return (p);
+	free(p);
 }
