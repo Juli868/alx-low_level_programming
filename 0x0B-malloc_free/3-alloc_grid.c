@@ -24,13 +24,10 @@ int **alloc_grid(int width, int height)
 			{
 				p[i][j] = 0;
 			}
+			return (p);
 		}
-		return (p);
-		free(p);
 	}
 	else
-	{
 		return (NULL);
-		free(p);
-	}
+	return (p);
 }
