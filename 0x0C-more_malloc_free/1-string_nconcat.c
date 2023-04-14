@@ -10,7 +10,7 @@
  */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	unsigned int l1, l2, count;
+	unsigned int l1, l2, count, sum;
 	char *out;
 
 	l1 = 0;
@@ -20,27 +20,27 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		l1++;
 	while (s2[l2])
 		l2++;
-	if ( l2 <= 1 || l1 <= 1)
+	l1--;
+	if (l2 <= 1 || l1 <= 1)
 	{
 		return (NULL);
 		exit(0);
 	}
-	if (l2 < n)
+	if (n > l2)
+	{
+		n = l2;
+	}
+	sum = l1 +n ;
+	out = malloc(sum);
+	while (out[count])
+	{
+		if (count < l1)
+			out[count] = s1[count];
+		else
 		{
-			n= l2;
+			out[count] = s2[count - l1];
 		}
-			out = malloc(l1 + n);
-			l2 = 0;
-			while (out[count])
-			{
-				if (count < l1)
-					out[count] = s1[count];
-				else
-				{
-					out[count] = s2[l2];
-					l2++;
-				}
-				count++;
-			}
-			return (out);
+		count++;
+	}
+	return (out);
 }
