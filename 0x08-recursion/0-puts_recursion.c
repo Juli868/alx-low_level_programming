@@ -5,15 +5,9 @@
  */
 void _puts_recursion(char *s)
 {
-	int i;
-
-	while (*s)
+	if (*s)
 	{
-		i++;
+		_putchar(*s);
+		_puts_recursion(s+1);
 	}
-	if (s[i])
-	{
-		_putchar(s[i]);
-	}
-	_puts_recursion(s[i - 1]);
 }
