@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdio.h>
 #include <stdlib.h>
 /**
  *string_nconcat - adds two strings
@@ -18,19 +19,24 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		l1++;
 	while (s2[l2] != '\0')
 		l2++;
-	if (l2 <= n)
-		n = l2;
-	count = l1 + n;
-	out = malloc(count);
-	for (i = 0; i <= count; i++)
+	if (l1 == 0 || l2 == 0)
+		return (NULL);
+	else
 	{
-		if (i < l1)
+		if (l2 <= n)
+			n = l2;
+		count = l1 + n;
+		out = malloc(count);
+		for (i = 0; i <= count; i++)
 		{
-			out[i] = s1[i];
-		}
-		else
-		{
-			out[i] = s2[i - l1];
+			if (i < l1)
+			{
+				out[i] = s1[i];
+			}
+			else
+			{
+				out[i] = s2[i - l1];
+			}
 		}
 	}
 	return (out);
