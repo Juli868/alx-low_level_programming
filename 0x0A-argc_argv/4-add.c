@@ -20,7 +20,7 @@ int main(int argc, char *argv[])
 			sum = sum + d;
 			i++;
 		}
-		else 
+		else
 		{
 			printf("error");
 			return (1);
