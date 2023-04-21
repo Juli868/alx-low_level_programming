@@ -1,4 +1,5 @@
 #include "variadic_functions.h"
+#include <stdlib.h>
 /**
  *sum_them_all - adds all number given and return the resut
  *@n: number of arguments to add
@@ -11,7 +12,7 @@ int sum_them_all(const unsigned int n, ...)
 	add = 0;
 	if (n <= 0)
 	{
-		return (0);
+		exit(0);
 	}
 	else
 	{
