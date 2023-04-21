@@ -12,7 +12,7 @@ int sum_them_all(const unsigned int n, ...)
 	add = 0;
 	if (n <= 0)
 	{
-		exit(0);
+		return (0);
 	}
 	else
 	{
