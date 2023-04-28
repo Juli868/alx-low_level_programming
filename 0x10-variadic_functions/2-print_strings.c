@@ -12,8 +12,6 @@ void print_strings(const char *separator, const unsigned int n, ...)
 
 	va_list(args);
 	va_start(args, n);
-	if (separator == NULL)
-		return;
 	for (i = 0; i < n; i++)
 	{
 		juli = (va_arg(args, char *));
@@ -21,7 +19,13 @@ void print_strings(const char *separator, const unsigned int n, ...)
 			printf("(nil)");
 		printf("%s", juli);
 		if (i != (n - 1))
+		{
+			if (separator == NULL)
+			{
+				printf(" ");
+			}
 			printf("%s", separator);
+		}
 	}
 	printf("\n");
 	va_end(args);
