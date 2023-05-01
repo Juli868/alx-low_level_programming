@@ -1,6 +1,12 @@
 #ifndef LISTS_H
 #define LISTS_H
 #include <stddef.h>
+/**
+ *struct list_s - defining list to be used in the programms to follow
+ * @str: string to hold
+ * @len: length of the string
+ * @next: the address of the next string
+ */
 typedef struct list_s
 {
 	char *str;
