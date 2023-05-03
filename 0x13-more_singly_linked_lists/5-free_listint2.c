@@ -18,4 +18,5 @@ void free_listint2(listint_t **head)
 		*head = temp_add;
 	}
 	head = NULL;
+	fre(temp_add);
 }
