@@ -19,13 +19,9 @@ int _sqrt_recursion(int n)
  */
 int calculator(int n, int counter)
 {
-	if (n < 0)
+	if ((counter * counter) == n)
+		return (counter);
+	if (counter * counter > n)
 		return (-1);
-	else
-	{
-		if ((counter * counter) == n)
-			return(counter);
-		else
-			return (calculator(n, counter + 1));
-	}
+	return (calculator(n, counter + 1));
 }
