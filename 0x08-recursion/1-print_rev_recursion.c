@@ -12,8 +12,6 @@ void print_string(char *a, int len)
 		_putchar(a[len]);
 		print_string(a, len - 1);
 	}
-	else
-		_putchar('\n');
 }
 /**
  *_print_rev_recursion - returns the string from behind
