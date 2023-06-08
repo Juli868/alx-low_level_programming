@@ -10,7 +10,7 @@ int finder(int n, int counter)
 {
 	if ((counter * counter) == n)
 		return (counter);
-	if((counter * counter ) > n)
+	if ((counter * counter) > n)
 		return (-1);
 	return (finder(n, counter + 1));
 }
@@ -22,7 +22,7 @@ int finder(int n, int counter)
 int _sqrt_recursion(int n)
 {
 	if (n < 0)
-		return(-1);
+		return (-1);
 	else
 		return (finder(n, 0));
 }
