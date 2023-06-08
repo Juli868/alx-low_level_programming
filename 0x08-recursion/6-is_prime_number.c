@@ -8,19 +8,16 @@
  */
 int prime_counter(int n, int i, int counter)
 {
-	if(n > 0)
+	if (counter <= n)
 	{
-		if (counter != n)
-		{
-			if (n % counter == 0)
-				i++;
-			counter++;
-		}
+		if (n % counter == 0)
+			i++;
+		prime_counter(n, i, counter + 1);
 	}
-	if (i != 2)
-		return (0);
-	else
+	if (i == 2)
 		return (1);
+	else
+		return (0);
 }
 /**
  * is_prime_number - will tell if the number provided is prime or not
@@ -32,5 +29,8 @@ int is_prime_number(int n)
 	int counter = 1;
 	int i = 0;
 
-	return (prime_counter(n, i, counter));
+	if (n > 0)
+		return (prime_counter(n, i, counter));
+	else
+		return (0);
 }

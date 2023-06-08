@@ -1,30 +1,28 @@
 #include "main.h"
+#include <stdlib.h>
 /**
- *
- *
- *
+ *finder - checks if a number is a root of a number
+ *@n:number to find its root
+ *@counter:base number to start from
+ *Return: found root
  */
 int finder(int n, int counter)
 {
-	if (n < 0)
+	if ((counter * counter) == n)
+		return (counter);
+	if((counter * counter ) > n)
 		return (-1);
-	else 
-	{
-		if ((counter * counter ) == n)
-		      return (counter);
-		else
-			finder(n, counter++);
-	}
-	return (counter);
+	return (finder(n, counter + 1));
 }
 /**
- *
- *
- *
+ *_sqrt_recursion - calculates the squareroot of  number
+ *@n: number to find its squareroot
+ *Return: the found root
  */
 int _sqrt_recursion(int n)
 {
-	int counter = 0;
-
-	return (finder(n, counter));
+	if (n < 0)
+		return(-1);
+	else
+		return (finder(n, 0));
 }
