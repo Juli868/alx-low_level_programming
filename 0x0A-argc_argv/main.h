@@ -3,5 +3,4 @@
 
 int main(int argc, char *argv[]);
 int atoi(char *s);
-
 #endif
