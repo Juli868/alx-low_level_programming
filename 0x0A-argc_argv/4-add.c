@@ -10,22 +10,22 @@ int main(int argc, char *argv[])
 {
 	int sum, i, d;
 
-	i = 0;
+	i = 1;
 	sum = 0;
-	d = atoi(argv[i]);
-	while (i < argc)
+	if (argc > 0)
 	{
-		if (d > 0)
+		while (i < argc)
 		{
+			d = atoi(argv[i]);
 			sum = sum + d;
 			i++;
 		}
+	}
 		else
 		{
 			printf("error");
 			return (1);
 		}
-	}
-		printf("%d\n", sum);
-		return (0);
+	printf("%d\n", sum);
+	return (0);
 }

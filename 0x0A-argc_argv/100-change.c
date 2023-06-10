@@ -59,7 +59,7 @@ int main(int argc, char *argv[])
 		}
 		else
 			printf("0\n");
-		printf("%d\n",i);
+		printf("%d\n", i);
 	}
-	return(0);
+	return (0);
 }
