@@ -8,7 +8,7 @@
  */
 int main(int argc, char *argv[])
 {
-	int sum, i, d;
+	int sum, i;
 
 	i = 1;
 	sum = 0;
@@ -16,16 +16,15 @@ int main(int argc, char *argv[])
 	{
 		while (i < argc)
 		{
-			d = atoi(argv[i]);
-			sum = sum + d;
+			sum = sum + atoi(argv[i]);
 			i++;
 		}
 	}
-		else
-		{
-			printf("error");
-			return (1);
-		}
+	else
+	{
+		printf("error");
+		return (1);
+	}
 	printf("%d\n", sum);
 	return (0);
 }
