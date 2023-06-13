@@ -14,8 +14,11 @@ char *_strdup(char *str)
 	while (str[counter])
 		counter++;
 	duplicate = malloc(sizeof(char) * counter + 1);
-	if (duplicate == NULL || duplicate == 0)
+	if (str == NULL || duplicate == 0)
+	{
+		printf("failed to allocate memory");
 		return (NULL);
+	}
 	while (i < counter)
 	{
 		duplicate[i] = str[i];
