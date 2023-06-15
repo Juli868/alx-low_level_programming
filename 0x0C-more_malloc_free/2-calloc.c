@@ -1,27 +1,19 @@
 #include "main.h"
-#include <stdlib.h>
 /**
- *_calloc - allocates a memory
- *@nmemb: number of elements
- *@size: size f each element
- *Return: the allocated memory
+ * calloc - will alocate memory according to the given arguments
+ *@nmemb: number of elements in ana array
+ *@size: size of each element
+ *Return: the address of the array
  */
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
-	char *p;
-	unsigned int i;
+	int *array;
 
 	if (nmemb == 0 || size == 0)
-	{
 		return (NULL);
-	}
-	else
-	{
-		p = malloc(nmemb * size);
-		for  (i = 0; i < (nmemb * size); i++)
-		{
-			p[i] = 0;
-		}
-	}
-	return (p);
+	array = malloc(nmemb * size);
+	if (array == 0)
+		return (NULL);
+	return (array);
+	free(array);
 }

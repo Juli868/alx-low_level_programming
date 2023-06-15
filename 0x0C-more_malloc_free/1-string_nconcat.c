@@ -1,46 +1,42 @@
 #include "main.h"
-#include <stdio.h>
-#include <stdlib.h>
 /**
- *string_nconcat - adds two strings
+ *string_nconcat - will add two strings
  *@s1: first string
  *@s2: second string
- *@n: number of characters to add to
- *Return: the concantinated string
+ *@n: number of bits to take
+ *Return: address of the new string
  */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	unsigned int l1, l2, count, sum;
-	char *out;
+	unsigned int counter, str1_len, str2_len, total;
+	char *new;
 
-	l1 = 0;
-	l2 = 0;
-	count = 0;
-	while (s1[l1])
-		l1++;
-	while (s2[l2])
-		l2++;
-	l1--;
-	if (l2 <= 1 || l1 <= 1)
-	{
+	str1_len = 0;
+	str2_len = 0;
+	while (s1[str1_len] != '\0')
+		str1_len++;
+	while (s2[str2_len] != '\0')
+		str2_len++;
+	if (str2_len < n)
+		n = str2_len;
+	total = n + str1_len;
+	new = malloc(sizeof(char) * total);
+	if (new == NULL)
 		return (NULL);
-		exit(0);
-	}
-	if (n > l2)
+	counter = 0;
+	while (counter < str1_len)
 	{
-		n = l2;
+		new[counter] = s1[counter];
+		counter++;
 	}
-	sum = l1 +n ;
-	out = malloc(sum);
-	while (out[count])
+	str1_len = 0;
+	while (counter < total)
 	{
-		if (count < l1)
-			out[count] = s1[count];
-		else
-		{
-			out[count] = s2[count - l1];
-		}
-		count++;
+		new[counter] = s2[str1_len];
+		counter++;
+		str1_len++;
 	}
-	return (out);
+	new[total] = '\0';
+	return (new);
+	free(new);
 }

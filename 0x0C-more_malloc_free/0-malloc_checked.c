@@ -1,17 +1,16 @@
-#include "main.h"
-#include <stdlib.h>
-#include <stdio.h>
+#include"main.h"
 /**
- *malloc_checked - alloctes memory
- *@b: the length of the the memory allocation
- *Return: the location of the memory
+ * malloc_checked - allocates memory of a given number
+ * @b:value to allocate
+ *Return: the allocated address
  */
 void *malloc_checked(unsigned int b)
 {
-	char *p;
+	int *address;
 
-       p= malloc(b);
-       if (p == NULL)
+	address = malloc(b);
+	if (address == NULL)
 		exit(98);
-	return (p);
+	return (address);
+	free(address);
 }
