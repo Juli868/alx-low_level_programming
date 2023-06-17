@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * calloc - will alocate memory according to the given arguments
+ *_calloc - will alocate memory according to the given arguments
  *@nmemb: number of elements in ana array
  *@size: size of each element
  *Return: the address of the array
