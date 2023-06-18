@@ -33,12 +33,8 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	new = malloc(sizeof(char) * total + 1);
 	if (new == NULL)
 		return (NULL);
-	counter = 0;
-	while (counter < str1_len)
-	{
+	for (counter = 0; counter < str1_len; counter++)
 		new[counter] = s1[counter];
-		counter++;
-	}
 	str1_len = 0;
 	while (counter < total)
 	{
