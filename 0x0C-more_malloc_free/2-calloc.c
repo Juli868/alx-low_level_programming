@@ -8,14 +8,14 @@
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
 	int *array;
-       unsigned int counter;
+	unsigned int counter;
 
 	if (nmemb == 0 || size == 0)
 		return (NULL);
 	array = malloc(nmemb * size);
 	if (array == 0)
 		return (NULL);
-	for(counter = 0; counter < nmemb; counter++)
+	for (counter = 0; counter < nmemb; counter++)
 		array[counter] = 0;
 	return (array);
 	free(array);
