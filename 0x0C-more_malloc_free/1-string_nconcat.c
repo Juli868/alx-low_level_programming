@@ -13,10 +13,20 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 
 	str1_len = 0;
 	str2_len = 0;
-	while (s1[str1_len] != '\0')
-		str1_len++;
-	while (s2[str2_len] != '\0')
-		str2_len++;
+	if (s1 == NULL)
+		str1_len = 0;
+	else
+	{
+		while (s1[str1_len] != '\0')
+			str1_len++;
+	}
+	if (s2 == NULL)
+		str2_len = 0;
+	else
+	{
+		while (s2[str2_len] != '\0')
+			str2_len++;
+	}
 	if (str2_len < n)
 		n = str2_len;
 	total = n + str1_len;
