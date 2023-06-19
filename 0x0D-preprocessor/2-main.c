@@ -1,7 +1,7 @@
-#include <stdio.h>
+#include "stdio.h"
 /**
- *main - satrts the program excutiojn
- *Return: 0 as default
+ *main - will display the fil ename
+ *Return: 0 always
  */
 int main(void)
 {
