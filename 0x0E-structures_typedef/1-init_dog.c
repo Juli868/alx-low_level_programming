@@ -1,11 +1,11 @@
-#include "dog.h"
 #include <stdlib.h>
+#include "dog.h"
 /**
- * init_dog - provides the vaue to all elements of the structure dog
- * @name: dog name
- * @age: dog's age
- * @owner: dog's owner
- * @d: pointer to thee structure
+ *init_dog - will give values to elements of struct defined
+ *@d: struct name defined
+ *@name: name to be set
+ *@age: age to set
+ *@owner: dog's owner
  */
 void init_dog(struct dog *d, char *name, float age, char *owner)
 {
@@ -15,3 +15,4 @@ void init_dog(struct dog *d, char *name, float age, char *owner)
 	(*d).age = age;
 	(*d).owner = owner;
 }
+
