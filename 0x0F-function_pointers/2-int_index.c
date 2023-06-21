@@ -1,21 +1,28 @@
 #include "function_pointers.h"
 /**
- *int_index - will look for an integer place
- *@array: address of array to look into
- *@size: number of elements in the array
- *@cmp: pointyer to use
- *Return: -1 if error occurred or the placce value of the current number
+ *int_index - looks for similar int in an array
+ *@array: array to check
+ *@size: size of the array
+ *@cmp:function t d the task
+ *Return: the vaue psitin
  */
 int int_index(int *array, int size, int (*cmp)(int))
 {
-	int i;
+	int counter, ans;
 
-	if (array == NULL || cmp == NULL || size <= 0)
+	ans = 0;
+	if (size <= 0 || array == NULL)
 		return (-1);
-	for (i = 0; i < size; i++)
+	for (counter = 0; counter < size; counter++)
 	{
-		if ((*cmp)(array[i]))
-			return (i);
+		if (cmp(array[counter]) != 0)
+		{
+			ans = counter;
+			break;
+		}
+
 	}
-	return (1);
+	if (ans == 0)
+		return (-1);
+	return (ans);
 }
