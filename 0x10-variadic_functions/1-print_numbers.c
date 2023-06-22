@@ -11,12 +11,12 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 	va_list mine;
 
 	va_start(mine, n);
-	for(counter = 0; counter < n; counter++)
+	for (counter = 0; counter < n; counter++)
 	{
-		if (counter != (n-1))
-			printf("%d%s",(va_arg(mine, int)), separator);
+		if (counter != (n - 1) && separator != NULL)
+			printf("%d%s", (va_arg(mine, int)), separator);
 		else
-			printf("%d",(va_arg(mine,int)));
+			printf("%d", (va_arg(mine, int)));
 	}
 	printf("\n");
 }
