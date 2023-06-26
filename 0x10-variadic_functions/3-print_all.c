@@ -8,11 +8,11 @@
  */
 void print_all(const char * const format, ...)
 {
-	long unsigned int counter;
+	unsigned long int counter;
 	va_list mine;
 
 	counter = 0;
-	va_start(mine,format);
+	va_start(mine, format);
 	while (counter < (strlen(format)))
 	{
 		switch (format[counter])
@@ -31,7 +31,7 @@ void print_all(const char * const format, ...)
 				break;
 		}
 		if (counter != (strlen(format) - 1))
-				printf(",");
+			printf(",");
 	}
 	va_end(mine);
 }
