@@ -1,7 +1,8 @@
 #include "main.h"
 /**
- *
- *
+ *abs - returns the absolute value of a number
+ *@a: number to finds its absolute value
+ *Return: calculated absolute value
  */
 int _abs(int a)
 {
@@ -9,7 +10,7 @@ int _abs(int a)
 	{
 		a = a;
 	}
-	else if (a < 0)
+	else
 	{
 		a = -1 * a;
 	}
