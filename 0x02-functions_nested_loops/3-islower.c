@@ -13,7 +13,7 @@ int _islower(int c)
 
 	for (i = 0; i < 26; i++)
 	{
-		if (c == alpha[i])
+		if (c == alpha[i] && c != 0)
 		{
 			return (1);
 		}
