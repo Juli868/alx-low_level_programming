@@ -11,16 +11,16 @@ int _putchar(char c)
  */
 size_t read_textfile(const char *filename, size_t letters)
 {
-	FILE *reading;
+	int reading;
 	size_t printed, counter = 0;
 	char *copy;
 
 	copy = malloc(letters);
 	printed = 0;
-	reading = fopen(filename, "r");
-	if (reading == NULL || filename == NULL)
+	reading = open(filename, O_RDONLY);
+	if (reading == -1 || filename == NULL)
 		return (0);
-	while (fgets(copy, letters, reading))
+	while (read(reading,copy, letters))
 	{
 		while (copy[counter])
 		{
@@ -33,6 +33,6 @@ size_t read_textfile(const char *filename, size_t letters)
 		counter = 0;
 	}
 	_putchar('\n');
-	fclose(reading);
+	close(reading);
 	return (printed);
 }
