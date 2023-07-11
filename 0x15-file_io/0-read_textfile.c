@@ -9,7 +9,7 @@ int _putchar(char c)
  * @letters: number of the letters in a file
  * Return: the number of read letters.
  */
-size_t read_textfile(const char *filename, size_t letters)
+ssize_t read_textfile(const char *filename, size_t letters)
 {
 	int reading;
 	size_t printed, counter = 0;
