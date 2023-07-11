@@ -1,7 +1,7 @@
 #include "main.h"
 int _putchar(char c)
 {
-	return(write(1, &c, 1));
+	return (write(1, &c, 1));
 }
 /**
  * read_textfile - prints on the console the contents of a file
@@ -20,7 +20,7 @@ size_t read_textfile(const char *filename, size_t letters)
 	reading = fopen(filename, "r");
 	if (reading == NULL || filename == NULL)
 		return (0);
-	while (fgets(copy, letters,reading))
+	while (fgets(copy, letters, reading))
 	{
 		while (copy[counter])
 		{
