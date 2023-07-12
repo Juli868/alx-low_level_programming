@@ -1,8 +1,4 @@
 #include "main.h"
-int _putchar(char c)
-{
-	return (write(1, &c, 1));
-}
 /**
  * read_textfile - prints on the console the contents of a file
  * @filename: name of the file
