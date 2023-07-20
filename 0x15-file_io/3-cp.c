@@ -11,22 +11,22 @@ int main(int args, char **argv)
 
 	if (args != 3)
 	{
-		printf("Usage: cp file_from file_to)\n");
+		write(3, "Usage: cp file_from file_to", 1024);
 		exit(97);
 	}
 	fl_1 = open(argv[1], O_RDONLY);
 	fl_2 = open(argv[2], O_RDWR | O_CREAT);
 	if (fl_1 == -1)
 	{
-		printf("Error: Can't read from file%s\n", argv[1]);
+		write(3, &argv[1], 1024);
 		exit(98);
 	}
 	if (fl_2 == -1)
 	{
-		printf("Error: Can't write to%s\n", argv[2]);
+		write(3, argv[2],1024);
 		exit(99);
 	}
-	while (read(fl_1, copy, 1024))
+	while (read(fl_1, copy, 2500))
 	{
 		for (counter = 0; copy[counter]; counter++)
 		{

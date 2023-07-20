@@ -16,7 +16,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	reading = open(filename, O_RDONLY);
 	if (reading == -1 || filename == NULL)
 		return (0);
-	while (read(reading,copy, letters))
+	while (read(reading, copy, letters))
 	{
 		while (copy[counter])
 		{
