@@ -3,6 +3,7 @@
  * main - copies element of oe file to another
  * @args: number of arguments given at run time
  * @argv: arguments given
+ * Return: always 1 if succeeded
  */
 int main(int args, char **argv)
 {
@@ -18,15 +19,15 @@ int main(int args, char **argv)
 	fl_2 = open(argv[2], O_RDWR | O_CREAT);
 	if (fl_1 == -1)
 	{
-		write(3, &argv[1], 1024);
+		write(3, &argv[1], buf_size);
 		exit(98);
 	}
 	if (fl_2 == -1)
 	{
-		write(3, argv[2],1024);
+		write(3, argv[2], buf_size);
 		exit(99);
 	}
-	while (read(fl_1, copy, 2500))
+	while (read(fl_1, copy, buf_size))
 	{
 		for (counter = 0; copy[counter]; counter++)
 		{
