@@ -1,0 +1,1 @@
+This repository contains taska that were assigned to me during my studying period in the Alx-program about bit manipulation as the name suggests of the repo. Hence this demonstrates my capabilities in doiung so using C programming.
