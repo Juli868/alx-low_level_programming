@@ -1,7 +1,7 @@
 #include "main.h"
 /**
  * get_endianness - proves if the system is big or little endian
- * Return 0 f big or 1 f little.
+ * Return: 0 f big or 1 f little.
  */
 int get_endianness(void)
 {
