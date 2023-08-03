@@ -10,7 +10,7 @@ void print_binary(unsigned long int n)
 
 	for (checker = 63; checker >= 0; checker--)
 	{
-		current = n >> i;
+		current = n >> checker;
 
 		if (current & 1)
 		{
