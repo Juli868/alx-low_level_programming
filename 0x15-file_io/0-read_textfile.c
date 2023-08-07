@@ -8,19 +8,21 @@
 ssize_t read_textfile(const char *filename, size_t letters)
 {
 	int file;
-	ssize_t counter, temp;
+	ssize_t counter;
+	size_t temp;
 	char *copy;
 
 	copy = malloc(sizeof(char) * letters);
 	if (filename == NULL)
 		return (0);
-	file = open(filename, O_RDONLY<<1);
+	file = open(filename, O_RDONLY);
 	if (file == -1)
 		return (0);
-	read(file, copy, letters);
-	counter = write(1, copy, letters);
-	temp = letters;
-	if (counter != temp)
+	temp = read(file, copy, letters);
+	counter = write(STDOUT_FILENO, copy, temp);
+	if (counter == -1)
 		return (0);
+	free(copy);
+	close(file);
 	return (counter);
 }
