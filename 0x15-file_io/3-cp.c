@@ -20,13 +20,18 @@ int main(int argc, char **argv)
 	to = open(argv[2], O_CREAT | O_WRONLY, 0664);
 	if (from == -1)
 	{
-		write(STDERR_FILENO, "Error: Can't read from file\n", 100);
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
 		exit(98);
+	}
+	if (to == -1)
+	{
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
+		exit(99);
 	}
 	while (1)
 	{
 		counter = read(from, text, size);
-		if(text[counter] != EOF)
+		if (text[counter] != EOF)
 		{
 			size *= 2;
 			text = realloc(text, sizeof(char) * size);
