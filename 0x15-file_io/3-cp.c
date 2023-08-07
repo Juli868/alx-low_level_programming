@@ -31,10 +31,9 @@ int main(int argc, char **argv)
 			size *= 2;
 			text = realloc(text, sizeof(char) * size);
 		}
-		write(to, text, size);
-		if (text[counter] == EOF)
-			break;
+		break;
 	}
+	write(to, text, size);
 	close(from);
 	close(to);
 	free(text);
