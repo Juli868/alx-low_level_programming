@@ -26,12 +26,12 @@ int append_text_to_file(const char *filename, char *text_content)
 	int file, length;
 	ssize_t checker;
 
-	file = open(filename, O_APPEND|O_WRONLY);
+	file = open(filename, O_APPEND | O_WRONLY);
 	if (file == -1)
 		return (-1);
 	length = _strlen(text_content);
 	checker = write(file, text_content, length);
 	if (checker == -1)
-		return(-1);
+		return (-1);
 	return (1);
 }
