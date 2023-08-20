@@ -5,7 +5,9 @@
  */
 int main(void)
 {
-	char string[1024] = {"and that piece of art is useful\" - Dora Korpar, 2015-10-19\n"};
-	write(2,string,1024);
+	char string[59] = {"and that piece of art is useful\" - Dora Korpar,"
+"2015-10-19\n"};
+
+	write(2, string, 59);
 	return (1);
 }
