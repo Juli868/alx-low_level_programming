@@ -28,15 +28,12 @@ int main(int argc, char **argv)
 		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
 		exit(99);
 	}
-	while (1)
+	counter = read(from, text, size);
+	while (text[counter] != EOF)
 	{
+		size *= 2;
+		text = realloc(text, sizeof(char) * size);
 		counter = read(from, text, size);
-		if (text[counter] != EOF)
-		{
-			size *= 2;
-			text = realloc(text, sizeof(char) * size);
-		}
-		break;
 	}
 	write(to, text, size);
 	close(from);
