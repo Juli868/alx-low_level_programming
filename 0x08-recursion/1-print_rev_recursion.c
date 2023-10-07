@@ -7,7 +7,7 @@
  */
 void print_string(char *a, int len)
 {
-	if (len >= 0)
+	if (len > 0)
 	{
 		_putchar(a[len]);
 		print_string(a, len - 1);
@@ -23,6 +23,8 @@ void _print_rev_recursion(char *s)
 	int len;
 
 	len = strlen(s);
+	if (s == NULL)
+		return;
 	print_string(s, len - 1);
 	_putchar('\n');
 }
