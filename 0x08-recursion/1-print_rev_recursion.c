@@ -7,11 +7,12 @@
  */
 void print_string(char *a, int len)
 {
-	if (len > 0)
+	if (len >= 0)
 	{
 		_putchar(a[len]);
 		print_string(a, len - 1);
 	}
+
 }
 /**
  *_print_rev_recursion - returns the string from behind
@@ -22,5 +23,6 @@ void _print_rev_recursion(char *s)
 	int len;
 
 	len = strlen(s);
-	print_string(s, len);
+	print_string(s, len - 1);
+	_putchar("\n")
 }
