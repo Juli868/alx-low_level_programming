@@ -1,4 +1,5 @@
 #include "main.h"
+#include <math.h>
 /**
  *prime_counter - is the finder for prime number
  *@n: number to checker
@@ -6,18 +7,15 @@
  *@counter: number to check if divior
  *Return: 1 for true or 0 if not
  */
-int prime_counter(int n, int i, int counter)
+int prime_counter(int n, int counter)
 {
-	if (counter <= n)
-	{
-		if (n % counter == 0)
-			i++;
-		prime_counter(n, i, counter + 1);
-	}
-	if (i == 2)
+	int pre, i;
+
+	pre = pow(counter,n) - counter;
+	i = pre % n;
+	if (i == 0)
 		return (1);
-	else
-		return (0);
+	return (0);
 }
 /**
  * is_prime_number - will tell if the number provided is prime or not
@@ -27,10 +25,9 @@ int prime_counter(int n, int i, int counter)
 int is_prime_number(int n)
 {
 	int counter = 1;
-	int i = 0;
 
 	if (n > 0)
-		return (prime_counter(n, i, counter));
+		return (prime_counter(n, counter));
 	else
 		return (0);
 }
