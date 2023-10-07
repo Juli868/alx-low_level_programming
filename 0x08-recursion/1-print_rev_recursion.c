@@ -23,7 +23,7 @@ void _print_rev_recursion(char *s)
 	int len;
 
 	len = strlen(s);
-	if (s == NULL)
+	if (s == NULL || len == 0)
 		return;
 	print_string(s, len - 1);
 	_putchar('\n');
