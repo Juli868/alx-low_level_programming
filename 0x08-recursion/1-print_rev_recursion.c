@@ -24,5 +24,5 @@ void _print_rev_recursion(char *s)
 
 	len = strlen(s);
 	print_string(s, len - 1);
-	_putchar("\n")
+	_putchar('\n');
 }
