@@ -39,7 +39,7 @@ int is_prime_number(int n)
 {
 	int counter = 1;
 
-	if (n > 0)
+	if (n > 1)
 		return (prime_counter(n, counter));
 	else
 		return (0);
