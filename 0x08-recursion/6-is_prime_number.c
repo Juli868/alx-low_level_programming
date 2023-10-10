@@ -1,9 +1,22 @@
 #include "main.h"
 #include <math.h>
 /**
+ * _pow - finds the power pf two numbers
+ * @a: base
+ * @b: exponent
+ * Return: the answer
+ */
+int _pow(int a, int b)
+{
+	int result = 0;
+
+	if (b > 0)
+		result = (a * _pow(a, b - 1));
+	return (result);
+}
+/**
  *prime_counter - is the finder for prime number
  *@n: number to checker
- *@i: counter for divors
  *@counter: number to check if divior
  *Return: 1 for true or 0 if not
  */
@@ -11,7 +24,7 @@ int prime_counter(int n, int counter)
 {
 	int pre, i;
 
-	pre = pow(counter,n) - counter;
+	pre = _pow(counter, n) - counter;
 	i = pre % n;
 	if (i == 0)
 		return (1);
@@ -31,3 +44,4 @@ int is_prime_number(int n)
 	else
 		return (0);
 }
+
