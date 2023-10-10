@@ -37,7 +37,7 @@ int prime_counter(int n, int counter)
  */
 int is_prime_number(int n)
 {
-	int counter = 1;
+	int counter = 7777777;
 
 	if (n > 1)
 		return (prime_counter(n, counter));
