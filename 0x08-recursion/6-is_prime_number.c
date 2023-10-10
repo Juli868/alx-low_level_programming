@@ -28,7 +28,7 @@ int prime_counter(int n, int counter)
 	i = pre % n;
 	if (i == 0)
 		return (1);
-	return (0);
+	return (-1);
 }
 /**
  * is_prime_number - will tell if the number provided is prime or not
