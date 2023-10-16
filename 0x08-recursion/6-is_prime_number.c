@@ -24,11 +24,11 @@ int prime_counter(int n, int counter)
 {
 	int pre, i;
 
-	pre = _pow(counter, n) - counter;
+	pre = (_pow(counter, n)) - counter;
 	i = pre % n;
 	if (i == 0)
 		return (1);
-	return (-1);
+	return (0);
 }
 /**
  * is_prime_number - will tell if the number provided is prime or not
@@ -37,11 +37,12 @@ int prime_counter(int n, int counter)
  */
 int is_prime_number(int n)
 {
-	int counter = 7777777;
+	int counter = 2; 
 
-	if (n > 1)
+	if (n > 2)
 		return (prime_counter(n, counter));
-	else
-		return (0);
+	else if (n == 2)
+		return (1);
+	return (0);
 }
 
