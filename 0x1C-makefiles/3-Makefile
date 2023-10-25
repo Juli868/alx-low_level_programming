@@ -5,7 +5,7 @@ NAME = school
 RM = rm -f
 all: $(OBJ)
 	$(CC) $(OBJ) -o $(NAME)
-$(OBJ):
+$(OBJ): $(SRC)
 	$(CC) -Wall -Werror -Wextra -pedantic -c $(SRC)
 clean:
 	$(RM) *~ \#* $(NAME)
@@ -14,4 +14,4 @@ oclean:
 fclean: clean oclean
 re: oclean all
 	$(CC) -c $(SRC)
-.PHONY: clean oclean fclean re
+.PHONY: all clean oclean fclean re
