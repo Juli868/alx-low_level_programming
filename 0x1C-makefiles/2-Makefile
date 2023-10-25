@@ -1,0 +1,8 @@
+CC = gcc -Wall -Werror
+SRC = main.c school.c
+OBJ = main.o school.o
+NAME = school
+all: main.o
+	$(CC) $(OBJ) -o school
+main.o:
+	$(CC) $(SRC) -c
