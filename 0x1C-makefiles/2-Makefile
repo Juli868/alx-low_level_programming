@@ -6,3 +6,4 @@ all: $(OBJ)
 	$(CC) $(OBJ) -o $(NAME)
 $(OBJ): $(SRC)
 	$(CC) $(SRC) -c
+.PHONY: all
