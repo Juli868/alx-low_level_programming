@@ -1,4 +1,6 @@
-all: school.o
-	gcc -wall -werror school.o -o school
+all: main.o school.o
+	gcc -Wall -Werror school.o main.o -o school
 school.o: school.c
-	gcc -wall -werror -c school.c
+	gcc -Wall -Werror -c school.c
+main.o: main.c
+	gcc -Wall -Werror -c main.c
