@@ -1,0 +1,4 @@
+all: school.o
+	gcc -wall -werror school.o -o school
+school.o: school.c
+	gcc -wall -werror -c school.c
