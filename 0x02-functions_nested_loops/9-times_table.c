@@ -14,8 +14,14 @@ void times_table(void)
 		prod = i;
 		for (k = 0; k < 10; k++)
 		{
-			printf("%d, ", prod);
-			prod = prod + i;
+			_putchar(prod + '0');
+			
+			if (k != 9)
+			{
+				_putchar(',');
+				_putchar(' ');
+			}
+			prod = i* k;
 		}
 		_putchar('\n');
 	}
