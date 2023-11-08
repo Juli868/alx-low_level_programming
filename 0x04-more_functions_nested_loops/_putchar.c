@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include "main.h"
+#include <unistd.h>
 /**
 *_putchar - will print aa character to the console
 *@c: character to be printed
@@ -7,5 +8,5 @@
 */
 int _putchar(char c)
 {
-	return (fwrite(1, &c, 1));
+	return (write(1, &c, 1));
 }
