@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include "search_algos.h"
 /**
  * linear_search - searches in an array liearly.
  * @array: first element
