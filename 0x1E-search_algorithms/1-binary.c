@@ -1,21 +1,31 @@
 #include "search_algos.h"
 #include <stdio.h>
 #include <stddef.h>
+/**
+ *binary_search - searches in the array a value using binary method
+ *@array: array to look into
+ *@size: size of the array
+ *@value: value to look for
+ *Return: the index of the value or -1 if an error occured
+ */
 int binary_search(int *array, size_t size, int value)
 {
-	size_t half;
+	size_t half, left, right;
+
 	if (array == NULL)
 		return (-1);
-	if (array[size] == value)
-		return ((int)size);
-	half = size / 2;
-	size = size - half;
-	if (half > 0)
+	right = size;
+	left = 0;
+	while (left <= right)
 	{
-		if(value < array[half])
-			binary_search(array, half, value);
-		else 
-			binary_search(&array[half], size, value);
+		half = (left + right) / 2;
+		if (value > array[half])
+			left = half;
+		else if (value < array[half])
+			right = half;
+		else
+			return (half);
+		
 	}
 	return (-1);
 }
