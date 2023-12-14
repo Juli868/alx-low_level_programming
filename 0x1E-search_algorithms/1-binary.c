@@ -25,7 +25,6 @@ int binary_search(int *array, size_t size, int value)
 			right = half;
 		else
 			return (half);
-		
 	}
 	return (-1);
 }
