@@ -23,10 +23,10 @@ int create_file(const char *filename, char *text_content)
 	int file, length;
 	ssize_t counter;
 
-	file = open(filename, O_CREAT|O_WRONLY, 0600);
-	if (file== -1)
+	file = open(filename, O_CREAT | O_WRONLY, 0600);
+	if (file == -1)
 	{
-		write(STDERR_FILENO,"fails",5);
+		write(STDERR_FILENO, "fails", 5);
 		return (-1);
 	}
 	length = _strlen(text_content);
